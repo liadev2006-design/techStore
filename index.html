@@ -1,14 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TechStore</title>
 </head>
 
 <body>
+
+    <header class="header">
+        <button id="Dowloand" class="svg svg-shop-header" title="Welcome">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0"
+                stroke="currentColor" class="icon-svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+            </svg>
+        </button>
+
+        <span class="TechStore-header">TechStore</span>
+        <div class="sections-header">
+            <span>Inicio</span>
+            <span>Tienda</span>
+            <span>Nosotros</span>
+            <span>Contacto</span>
+        </div>
+
+        <input type="search" class="search-input-header" placeholder="Buscar">
+        <button class="svg" title="Descargar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0"
+                stroke="currentColor" class="icon-svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+            </svg>
+        </button>
+        <button class="svg" title="Descargar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0"
+                stroke="currentColor" class="icon-svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+            </svg>
+        </button>
+    </header>
+
+
+    <div class="directorio">
+        <span>Inicio</span>
+        <span> > </span>
+        <span>Electronica</span>
+        <span> > </span>
+        <span class="lastdirectory">Audífonos</span>
+    </div>
+
+
+
+    <section class="filter-section">
+
+        <div class="categorie-filter-section">
+            <h4>Categorías</h4>
+
+            <input type="checkbox">
+            <label>Over-Car</label>
+            <p class="span-checkbox-filter-section">12</p><br>
+            <input type="checkbox">
+            <label>In Ear</label>
+            <p class="span-checkbox-filter-section">8</p><br>
+            <input type="checkbox">
+            <label>Noise Cancelling</label>
+            <p class="span-checkbox-filter-section">15</p><br>
+            <input type="checkbox">
+            <label>Deportivos</label>
+            <p class="span-checkbox-filter-section">5</p><br>
+
+
+        </div>
+
+        <div class="price-filter-section">
+            <h4>Precio</h4>
+            <button class="price-button ">
+                <p>$</p>50
+            </button> -
+            <button class="price-button price-button-more">
+                <p>$</p> 1200
+            </button>
+            <input type="range" class="input-range-filter-section">
+        </div>
+        <div class="color-filter-section">
+            <h4>Color</h4>
+            <div class="color-button-filterSection"></div>
+            <div class="color-button-filterSection"></div>
+            <div class="color-button-filterSection"></div>
+
+
+            <div class="color-button-filterSection"></div>
+            <div class="color-button-filterSection"></div>
+            <br>
+        </div>
+    </section>
+
+    <section class="product-section">
+
+        <div class="products-description">
+            <div class="product-info-product-section">
+                <h1>Audífonos inalámbricos</h1>
+                <p>Mostrando 1-9 de 45 productos</p>
+            </div>
+
+            <div class="filter-product-section">
+                <span class="span-filter-product-section">
+                    Ordenar por
+                    <select>
+                        <option>Relevancia </option>
+                        <option>Precio</option>
+                        <option>Fecha de publicacion</option>
+                    </select>
+                </span>
+
+                <div class="svg"></div>
+                <div class="svg"></div>
+            </div>
+        </div>
+
+        <div class="product-grid">
+            <article>
+                <img src="../TechStore/foto.png">
+
+                <div class="starts-product"></div>
+                <h4>Premium X100 Wireless</h4>
+                <p>Cancelacion de ruido activa y 30 horas de batería</p>
+                <div class="product-description-grid">
+                    <p>$249</p>
+                    <div class="svg"></div>
+
+                </div>
+            </article>
+
+            <article>
+                <img src="../TechStore/foto.png">
+
+                <div class="starts-product"></div>
+                <h4>Premium X100 Wireless</h4>
+                <p>Cancelacion de ruido activa y 30 horas de batería</p>
+                <div class="product-description-grid">
+                    <p>$249</p>
+                    <div class="svg"></div>
+
+                </div>
+            </article>
+            <article>
+                <img src="../TechStore/foto.png">
+
+                <div class="starts-product"></div>
+                <h4>Premium X100 Wireless</h4>
+                <p>Cancelacion de ruido activa y 30 horas de batería</p>
+                <div class="product-description-grid">
+                    <p>$249</p>
+                    <div class="svg"></div>
+
+                </div>
+            </article>
+            <article>
+                <img src="../TechStore/foto.png">
+
+                <div class="starts-product"></div>
+                <h4>Premium X100 Wireless</h4>
+                <p>Cancelacion de ruido activa y 30 horas de batería</p>
+                <div class="product-description-grid">
+                    <p>$249</p>
+                    <div class="svg"></div>
+
+                </div>
+            </article>
+            <article>
+                <img src="../TechStore/foto.png">
+
+                <div class="starts-product"></div>
+                <h4>Premium X100 Wireless</h4>
+                <p>Cancelacion de ruido activa y 30 horas de batería</p>
+                <div class="product-description-grid">
+                    <p>$249</p>
+                    <div class="svg"></div>
+
+                </div>
+            </article>
+            <article>
+                <img src="../TechStore/foto.png">
+
+                <div class="starts-product"></div>
+                <h4>Premium X100 Wireless</h4>
+                <p>Cancelacion de ruido activa y 30 horas de batería</p>
+                <div class="product-description-grid">
+                    <p>$249</p>
+                    <div class="svg"></div>
+
+                </div>
+            </article>
+        </div>
+        <br>
+    </section>
+
+    <section class="num-page">
+        <div class="svg"></div>
+        <div class="svg"></div>
+        <div class="svg"></div>
+        <div class="svg"></div>
+        ...
+        <div class="svg"></div>
+        <div class="svg"></div>
+    </section>
+
 
 </body>
 
