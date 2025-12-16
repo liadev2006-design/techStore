@@ -9,51 +9,26 @@
 255,255,255*/
 
 body{
-    
-    margin: 0px;
-    padding: 0px;
-    width: 98.8vw;
+    user-select: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 95vw;
     height: 1280px;
     background-color: rgb(246,246,248);
-   
 }
+
 
 *{
      font-family: Arial, Helvetica, sans-serif;
 
 }
-.svg{
-    width: 23px;
-    height: 23px;
-    background-color: bisque;
-    display: inline-block;
-    border: solid 1px black;
-    margin-left: 10px;
-}
+
 
     
 
-.header{
-    height: 12vh;
-    width:100%;
-   padding-top: 4vh;
-    box-sizing: border-box;
-    padding-left: 1.2vw;
-    
-    background-color: rgb(255,255,255);
-}
-.TechStore-header{
-font-size: 17px;
-font-weight: 600;
-   }
 
 
-   .sections-header{
-    font-size: 13px;
-    width: 26.12vw;
-    display: inline;
-    margin-left: 18.5vw;
-}
+
 
 
 .sections-header span{
@@ -64,20 +39,31 @@ margin-right: 3vw;
 color:rgb(33, 55, 86);
 }
 
-.search-input-header{
 
-    background-color: rgb(241,242,244);
-    border-radius: 4px;
-    border: none;
-    height: 5vh;
-    margin-left: 14vw;
-    width: 17vw;
- 
-}
 .search-input-header::placeholder {
       font-size: 12px;
       margin-left: 3vw;
     }
+
+    .search-input-header {
+  background-color: rgb(241, 242, 244);
+  border-radius: 4px;
+  border: none;
+  height: 5.4vh;
+  margin-left: 14vw;
+  width: 18vw;
+  padding-left: 40px; /* Añadir padding para el icono */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M11 2c4.9706 0 9 4.02944 9 9 0 2.125 -0.7381 4.0766 -1.9697 5.6162l4.1767 4.1768 -1.414 1.414 -4.1768 -4.1767C15.0766 19.2619 13.125 20 11 20c-4.97056 0 -9 -4.0294 -9 -9 0 -4.97056 4.02944 -9 9 -9m0 2c-3.86599 0 -7 3.13401 -7 7 0 3.866 3.13401 7 7 7 3.866 0 7 -3.134 7 -7 0 -3.86599 -3.134 -7 -7 -7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 18px;
+  font-size: 14px;
+}
+
+.search-input-header::placeholder {
+  font-size: 12px;
+  color: #666;
+}
     
 .svg-shop-header{
     margin-left: 2vw;
@@ -85,6 +71,54 @@ color:rgb(33, 55, 86);
 }
 
 
+.header {
+    height: 12vh;
+    width: 98.8vw;
+    padding-left: 1.2vw;
+    background-color: rgb(255, 255, 255);
+    
+    /* Añadir estas propiedades Flexbox */
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    gap: 2vw; /* Espacio uniforme entre elementos */
+    padding-top: 0; /* Eliminar padding-top anterior */
+}
+
+/* Eliminar display: inline de sections-header y usar flex */
+.sections-header {
+    font-size: 13px;
+    display: flex; /* Cambiar a flex */
+    align-items: center; /* Centrar verticalmente los spans */
+   /* Espacio entre spans */
+    margin-left: 18.5vw;
+}
+
+/* Asegurar que el logo SVG también se centre */
+.header > svg:first-of-type {
+    display: flex;
+    align-items: center;
+}
+
+/* Para el texto TechStore-header */
+.TechStore-header {
+    display: flex;
+    align-items: center;
+    font-size: 18px; /* Ajusta según necesites */
+    font-weight: bold;
+    margin-right: auto; /* Empuja todo lo demás a la derecha */
+}
+
+/* Para los SVG del carrito y persona */
+.svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg3 {
+    margin-left: -18px;
+    margin-right: 24px; /* Empuja el último icono hacia el anterior */
+}
 
 
 .directorio{
@@ -101,6 +135,15 @@ color:rgb(33, 55, 86);
     margin-right: 10px;
 
 }
+.directorio span:hover{
+    color: black;
+
+}
+.lastDirectory{
+color: black;
+font-weight:  600;
+}
+
 
 .lastdirectory{
     font-weight: 300;
@@ -108,52 +151,102 @@ color:rgb(33, 55, 86);
 
 
 
-
 .filter-section{
     box-sizing: border-box;
-height: 65vh;
-
-width: 19vw;
-margin-left: 3.2vw;
-padding-left: 1vw;
-padding-top: 4vh;
-margin-top: 7vh;
-display: block;
+    height: 65vh;
+    width: 19vw;
+    margin-left: 3.2vw;
+    padding-left: 1vw;
+    padding-top: 4vh;
+    margin-top: 7vh;
+    display: block;
 }
 .filter-section h4{
     margin-top: 0px;
     margin-bottom: 2vh;
 }
-.categorie-filter-section label{
+
+/* Contenedor para cada item checkbox */
+.categorie-filter-section .checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4vh;
+    width: 100%;
+}
+
+/* Estilos para los checkboxes */
+.categorie-filter-section input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Checkbox marcado - color azul */
+.categorie-filter-section input[type="checkbox"]:checked {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+/* Marca de check (✓) */
+.categorie-filter-section input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para los labels */
+.categorie-filter-section label {
     display: inline-block;
-margin-bottom: 1.4vh;
-width: 12.5vw;
+    margin-bottom: 0;
+    width: auto;
+    flex-grow: 1;
+    cursor: pointer;
 }
+
 .span-checkbox-filter-section{
-background-color: aliceblue;
-
-width:min-content;
-height: 2.5vh;
-
-padding-left: 0.3vw;
-padding-right: 0.3vw;
-
-display: inline;
-border-radius:17px;
-
-
-text-align: center;
-font-size: 12px;
+    background-color:#e0e5e7;
+    margin-right: 0px;
+    width:min-content;
+    height: 2.5vh;
+    padding-left: 0.4vw;
+    padding-right: 0.4vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    display: inline;
+    border-radius:17px;
+    text-align: center;
+    font-size: 12px;
 }
 
+.div-span-checkbox-filter-section{
+    display: flex;
+    width: auto;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
 
-.filter-section div {
+.categorie-filter-section,.color-filter-section,.price-filter-section {
     margin-bottom:6.3vh;
 }
 .price-button{
    background-color: rgb(246,246,248);
    border-color:rgb(255, 255, 255);
-  
    border-radius: 6px;
    margin-right: 1.5vw;
     width: 6vw;
@@ -166,23 +259,166 @@ font-size: 12px;
     display: inline;
 }
 
-.color-button-filterSection{
-    margin-bottom: 0px;
-    width: 2.1vw;
-    height: 2.1vw;
-    border-radius: 50%;
-    
-    border: solid 1px rgb(51,93,231);
-    background-color: aqua;
-    display: inline-block;
-
+/* Variables para facilitar la gestión de colores y tamaños */
+:root {
+    --circle-size: 30px;
+    --border-size: 1px;         /* Tamaño del borde AZUL */
+    --border-color: #1a73e8;    /* Color del borde AZUL */
+    --padding-size: 2px;        /* TAMAÑO DEL ESPACIO BLANCO */
 }
 
+.color-picker {
+    /* Estilos para el contenedor de los círculos (opcional) */
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 0px;
+    border-radius: 8px;
+}
+.color-filter-section ,.h4-color-picket , .color-picker ,.color-circle {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
 
+/* 1. Estilos Base para todos los círculos */
+.color-circle {
+    display: inline-block;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%; /* Hace que sean perfectamente circulares */
+    cursor: pointer;
+    
+    /* MODIFICACIÓN CLAVE: box-shadow base transparente. 
+       Su spread (extensión) cubre el tamaño total del borde + el espacio en blanco.
+       Esto asegura que el tamaño del círculo no cambie al aplicar el borde. */
+    box-shadow: 0 0 0 calc(var(--border-size) + var(--padding-size)) transparent;
+    transition: box-shadow 0.2s ease-in-out; 
+}
 
+/* 2. Definición de colores de fondo */
+.color-circle.black { background-color: black; }
+.color-circle.gray { background-color: gray; }
+.color-circle.blue { background-color: blue; }
+.color-circle.white { 
+    background-color: white; 
+    /* Añadir un borde sutil para que el blanco sea visible sobre el fondo claro */
+    border: 1px solid #ccc;
+}
+.color-circle.red { background-color: red; }
 
+/* 3. El Efecto Clave: Borde Azul con Espacio Blanco (Hover) */
+.color-circle:hover {
+    /* Utilizamos múltiples box-shadows (separados por comas):
+       1. [Interna] El anillo blanco (padding)
+       2. [Externa] El anillo azul (borde)
+    */
+    box-shadow: 
+        0 0 0 var(--padding-size) white, /* 1. Anillo BLANCO del tamaño del padding */
+        0 0 0 calc(var(--padding-size) + var(--border-size)) var(--border-color); /* 2. Anillo AZUL que comienza después del blanco */
+}
 
+/* 4. Estilo para el Círculo Seleccionado (Persistente) */
+.color-circle.selected {
+    /* Replicamos la misma lógica de doble sombra para el estado persistente */
+    box-shadow: 
+        0 0 0 var(--padding-size) white, /* 1. Anillo BLANCO del tamaño del padding */
+        0 0 0 calc(var(--padding-size) + var(--border-size)) var(--border-color); /* 2. Anillo AZUL que comienza después del blanco */
+}
 
+/* ESTILOS MEJORADOS PARA EL INPUT RANGE - COMPLETAMENTE AZUL */
+.input-range-filter-section {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 100%;
+  height: 4px;
+  margin-top: 15px;
+}
+
+/* Fondo azul para la pista completa */
+.input-range-filter-section::-webkit-slider-container {
+  background: #007bff;
+  height: 4px;
+  border-radius: 2px;
+}
+
+/* Track para Chrome, Safari, Edge */
+.input-range-filter-section::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #007bff;
+  border-radius: 2px;
+  border: none;
+}
+
+/* Thumb para Chrome, Safari, Edge */
+.input-range-filter-section::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #007bff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: -7px;
+}
+
+/* Para Firefox - Track */
+.input-range-filter-section::-moz-range-track {
+  height: 4px;
+  background: #007bff;
+  border-radius: 2px;
+  border: none;
+}
+
+/* Para Firefox - Progress (siempre azul) */
+.input-range-filter-section::-moz-range-progress {
+  height: 4px;
+  background: #007bff;
+  border-radius: 2px;
+}
+
+/* Para Firefox - Thumb */
+.input-range-filter-section::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #007bff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Para IE */
+.input-range-filter-section::-ms-track {
+  height: 4px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.input-range-filter-section::-ms-fill-lower {
+  background: #007bff;
+  border-radius: 2px;
+}
+
+.input-range-filter-section::-ms-fill-upper {
+  background: #007bff;
+  border-radius: 2px;
+}
+
+.input-range-filter-section::-ms-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #007bff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: 0;
+}
 
 .product-section{
    position: absolute;
@@ -211,11 +447,8 @@ display: inline-block;
     width: 100%;
  
 }
-select{
-    background-color:transparent;
-    border: none;
-    font-size: 15px;
-}
+
+
 .product-info-product-section{
     box-sizing: border-box;
     height: 100%;
@@ -234,72 +467,141 @@ select{
     display: flex;
     height: 100%;
     flex-wrap: nowrap;
-   
+    margin-top: -2vh;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     
 }
 
-.span-filter-product-section{
+.span-filter-product-section 
+{
+    padding: 1vh 1vh 0.3vh 2vh;
+height: 3vh;
     background-color: beige;
+   width: 17vw;
+   border-radius: 7px;
 }
 
-
+.svg-div-filter-product-section{
+    background-color: #ffffff;
+    display: flex;
+    width: 5.8vw;
+    align-items: center;
+    height: 7vh;
+    justify-content: center;
+}
+.span-filter-product-section select{
+       color: black;
+    font-weight: 600;
+    background-color:transparent;
+    border: none;
+margin-left: 1vw;
+font-size: 12.5px;
+width: 10vw;
+}
 
 .product-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-grid-gap: 2vw;
+grid-gap: 3.4vw;
     height: 150vh;
 }
 
 .product-grid article{
-    height: 73vh;
+    height: 78vh;
 
 }
 
 .product-grid article img{
  width: 100%;
  box-sizing: border-box;
- height: 75%;
+ height: 65%;
 }
 
+.product-info{
+padding: 2vh 2vh 2vh 2vh;
+
+}
 .starts-product{
-    margin: 0px;
+    margin: 0px 0px 1.3vh 0px;
     width: 60%;
-    background-color: azure;
     height: 3vh;
 }
+
+
+.star{
+    margin-right: 0.4vw;
+width: 1vw;
+height: 1vw;
+}
+
+ .starts-product p {
+    display: inline-block;
+font-size: 12px;
+ }
 
 .product-grid h4{
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
+
+.p-info-product{
+    width: 97%;
+    margin-top: 1.3vh;
+    margin-bottom: 3.7vh;
+}
+
+.flex-product-price-info{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+}
 .product-description-grid{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    width: 100%;
+    padding: 0%;
     justify-content: space-between;
     padding-right: 2vw;
 }
 
 
 
-.num-page{
-    text-align: center;
-    display: block;
+
+    
+.icon-grid {
+    display:flex;
+    gap: 12px;
+    padding: 20px;
+    justify-content: center;
+    
    width: 100%;
    position: relative;
-   margin-top:45%;
+   margin-top:55%;
+
   
 }
+.p-icon-grid{
+   color: rgb(65, 64, 64);display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
 .product-info-product-section p , .categorie-filter-section label  , .product-grid p ,
-.span-filter-product-section  , .price-button p
+.span-filter-product-section   , .price-button p,
+.span-checkbox-filter-section , .starts-product p
 {
    color: rgb(65, 64, 64);
    font-size: 12.5px;
 }
+
 .filter-section , .product-grid article ,
 .span-filter-product-section 
 {
@@ -307,3 +609,93 @@ grid-gap: 2vw;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+
+/* Color base para ambos */
+.svg,
+.icon {
+    color: #6C757D; /* gris */
+}
+
+/* Hover igual para ambos */
+.icon:hover{
+    background: #1a57f0;
+    color: #FFFFFF; /* icono blanco */
+}
+.icon:hover text {
+    fill: #FFFFFF;
+}
+
+.flex-product-price-info  {
+color:#1a57f0;
+font-weight: 600;
+}
+/* Tamaño del SVG externo */
+.svg {
+    width: 22px;
+    height: 22px;
+    padding: 3px;
+    background-color: #e0e5e7; /* Mantiene este color normalmente */
+    transition: background-color 0.3s ease, fill 0.3s ease;
+}
+.special{
+    background-color: #ffffff;
+}
+/* Estilo específico para SVGs dentro del contenedor de precio */
+.flex-product-price-info .svg {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #e0e5e7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* O más específico para tu clase .svg */
+.svg:not(.flex-product-price-info> .svg):hover {
+   width: 30px;
+   height: 30px;
+}
+
+/* Hover específico */
+.flex-product-price-info .svg:hover {
+    background-color: #1a57f0 !important; /* !important si hay conflictos */
+}
+
+.flex-product-price-info .svg:hover path {
+    fill: #FFFFFF !important;
+}
